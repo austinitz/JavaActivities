@@ -17,5 +17,6 @@ class ArithmeticTask {
         result += 8; 
         result %= 7; 
         System.out.println(result);
+
     }
 }
