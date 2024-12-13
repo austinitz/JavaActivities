@@ -1,0 +1,15 @@
+public class PrimitiveConcatenation {
+    public static void main(String[] args) {
+        byte three = 3;
+        int one = 1;
+        short two = 2;
+        float pointTwo = 2.0f;
+        char h = 'H';
+        char zero = '0';
+        boolean isTrue = true;
+
+        String output = "" + h + three + one + one + zero + " w" + zero + "r" + one + "d " + pointTwo + " " + isTrue;
+
+        System.out.println(output);
+    }
+}
