@@ -1,0 +1,33 @@
+public class CumulativeSumCalculator {
+
+    // Method with variable arguments to calculate cumulative sums and total sum
+    public static int calculateSum(int... numbers) {
+        int totalSum = 0; // To store the overall sum
+
+        System.out.println("Cumulative sums:");
+        for (int num : numbers) {
+            int cumulativeSum = 0; // To store cumulative sum for each number
+
+            // Calculate the cumulative sum for the current number
+            for (int i = 1; i <= num; i++) {
+                cumulativeSum += i;
+            }
+
+            // Print the cumulative sum for the current parameter
+            System.out.println(num + " = " + cumulativeSum);
+
+            // Add the cumulative sum to the total sum
+            totalSum += cumulativeSum;
+        }
+
+        return totalSum; // Return the overall sum
+    }
+
+    public static void main(String[] args) {
+        // Test the method with example parameters
+        int total = calculateSum(4, 5, 10);
+
+        // Print the overall sum
+        System.out.println("Total sum of all cumulative sums: " + total);
+    }
+}
