@@ -1,0 +1,46 @@
+// Gorilla.java
+
+public class Gorilla implements Animal {
+
+    // This method feeds the gorilla if it's time to eat.
+    @Override
+    public boolean feed(boolean timeToEat) {
+        if (timeToEat) {
+            System.out.println("// put gorilla food into cage");
+            System.out.println("The gorilla is eating.");
+            return true;
+        } else {
+            System.out.println("The gorilla is not hungry right now.");
+            return false;
+        }
+    }
+
+    // This method grooms the gorilla.
+    @Override
+    public void groom() {
+        System.out.println("// lather, rinse, repeat");
+        System.out.println("The gorilla has been groomed.");
+    }
+
+    // This method attempts to pet the gorilla.
+    @Override
+    public void pet() {
+        System.out.println("// pet at your own risk");
+        System.out.println("You tried to pet the gorilla. Proceed with caution!");
+    }
+
+    // Main method to test the Gorilla class.
+    public static void main(String[] args) {
+        Gorilla gorilla = new Gorilla();
+
+        // Feeding the gorilla
+        gorilla.feed(true);
+        gorilla.feed(false);
+
+        // Grooming the gorilla
+        gorilla.groom();
+
+        // Petting the gorilla
+        gorilla.pet();
+    }
+}
